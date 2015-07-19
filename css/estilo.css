@@ -1,0 +1,609 @@
+@charset "utf-8";
+ CSS Document 
+
+ reset css 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align:auto;
+	outline:none;
+}
+ HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***** Fontes e estilos *****/
+
+@font-face {
+    font-family: 'digital-7italic';
+    src: url('digital-7_italic-webfont.eot');
+    src: url('digital-7_italic-webfont-.eot#iefix') format('embedded-opentype'),
+         url('digital-7_italic-webfont.woff2') format('woff2'),
+         url('digital-7_italic-webfont.woff') format('woff'),
+         url('digital-7_italic-webfont.ttf') format('truetype'),
+         url('digital-7_italic-webfont.svg#digital-7italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.fonteDigital{
+	font-family: 'digital-7italic';
+}
+
+.RobCond{font-family:'Roboto Condensed', sans-serif;}
+.small10px{font-size:10px;}
+.big12px{font-size:12px;}
+.big14px{font-size:14px;}
+.big16px{font-size:16px;}
+.big18px{font-size:18px;}
+.big22px{font-size:22px;}
+.big26px{font-size:26px;}
+.big30px{font-size:30px;}
+.big35px{font-size:35px;}
+.big40px{font-size:40px;}
+.big50px{font-size:50px;}
+.big55px{font-size:55px;}
+.big90px{font-size:90px;}
+.creme{color:#eaf09c;}
+.amarelo{color:#d5d200;}
+.branco{color:#FFF;}
+.azul{color:#00c1ea;}
+.top25{margin-top:25px;}
+.top50{margin-top:50px;}
+
+body{font-family:'Roboto', sans-serif; color:#000; font-size:16px;}
+
+p{line-height:22px; font-size:16px;}
+p, h2, h3{margin:0 0 23px 0;}
+p.lineAuto{line-height:normal;}
+h2, h3{font-family:'Roboto Condensed', sans-serif; color:#000;}
+
+.marginZero{margin:0;}
+.noPleft{padding-left:0;}
+.noPright{padding-right:0;}
+.padding15{padding:15px;}
+
+/***** TOPO - img 100% *****/
+
+.wrapper{
+	background:url("../img/bg-top.jpg") center top no-repeat fixed;
+	background-size:cover;
+}
+
+/***** Top navegação *****/
+
+.topo{
+	width:100%;
+	height:auto;
+	background:#f6f6f6;
+	padding:15px 0;
+	box-shadow:0 0 5px #000;
+}
+
+.topoEsc{
+	width:100%;
+	min-height:115px;
+	height:auto;
+	background:#f6f6f6;
+	padding:25px 0 0 0;
+	box-shadow:0 0 5px #000;
+}
+
+.f-nav  { 
+    z-index: 9999; 
+	position: fixed; 
+	top: 0; width:100%; 
+} 
+
+.bandeiras{
+	word-spacing:5px;
+}
+
+.nav{
+	text-align:right;
+}
+
+.nav ul li{
+	display: inline;
+  	font-size: 22px;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	margin: 0 0 0 20px;
+  	color: #000;
+  	border-left: solid 1px #d5d200;
+  	padding: 0 0 0 30px;
+}
+
+.nav ul li.noborder{
+	border:none;
+}
+
+.nav ul li a:link, .nav ul li a:visited{
+	color:#000;
+}
+
+.nav ul li a:hover{
+	color:#d5d200;
+	text-decoration:none;
+}
+
+/***** Banner *****/
+
+.banner{
+	padding-top:80px;
+	padding-bottom:80px;
+}
+
+.botao-banner{
+	background:#d5d200;
+	color:#000;
+	text-decoration:none;
+	border:solid 2px #d5d200;
+	border-radius:10px;
+	display:inline-block;
+	margin:0;
+	
+	-webkit-transition:	all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.botao-banner:hover{
+	background:#d5d200;
+	background:rgba(213,210,0,0.1);
+	color:#FFF;
+	
+	-webkit-transition:	all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.botao-banner a, .botao-banner a:visited{
+	color:#000;
+	text-decoration:none;
+	display:block;
+	width:auto;
+	padding:25px;
+}
+
+.botao-banner a:hover{
+	color:#d5d200;
+}
+
+.msword{
+	padding:0 10px;
+	white-space:nowrap;
+}
+
+.msword img{
+	vertical-align:baseline;
+	width:40px;
+}
+
+/***** Conteúdo *****/
+
+.conteudo-bloco1{
+	border-top:solid 6px #0b0b0b;
+	background:#FFF;
+	padding-top:45px;
+}
+
+.conteudo-bloco2{
+	background:#FFF;
+	padding-top:45px;
+}
+
+.bgCinza{background:#f1f1f1;}
+
+.botao-menor a, .botao-menor a:visited{
+	color:#000;
+	text-decoration:none;
+	display:block;
+	width:auto;
+	padding:15px;
+}
+
+.botao-menor a:hover{
+	color:#000;
+}
+
+/*********** Bloco Contador *************/
+
+.bloco-contador{
+	background:#f1f1f1;
+	border-top:solid 10px #d5d200;
+	margin-top:70px;
+	padding-bottom:50px;
+}
+
+.contador-bg{
+	background:#131313;
+	padding:25px;
+	margin:-55px 0 35px 0;
+}
+
+.contador-bg p{
+	line-height:30px;
+	margin:10px 0 0 0;
+}
+
+p.contadorNumeral{
+	line-height:normal;
+	margin:0 auto;
+}
+
+p.contadorProposta{
+	padding:0 0 0 20px;
+}
+
+/*********** 3 Blocos *********/
+
+.blocos-3{
+	text-align:center;
+}
+
+/*********** Bloco economia *********/
+
+.bloco-economia{
+	padding-top:50px;
+	padding-bottom:50px;
+	background:#FFF;
+}
+
+.tabela-economia td{
+	background:url("../img/bg-economia.png") center 10px no-repeat;
+}
+
+.tabela-economia td.pontaEsquerda{
+	background:url("../img/bg-economia.png") left 10px no-repeat;
+}
+
+.tabela-economia td.pontaDireita{
+	background:url("../img/bg-economia.png") right 10px no-repeat;
+}
+
+.tabela-economia input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+.tabela-economia input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+.tabela-economia input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 28px;
+  height           : 28px;
+  margin           : 0;
+  border           : solid 3px #d5d200;
+  border-radius    : 28px;
+  background       : #FFF;
+}
+
+.tabela-economia input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+.tabela-economia input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 12px;
+  height           : 12px;
+  margin           : 5px;
+  border-radius    : 12px;
+  background       : #000;
+}
+
+.inputSalario{
+	width:100%;
+	height:auto;
+	font-family:'Roboto', sans-serif;
+	color:#666;
+	border-radius:10px;
+	padding:10px;
+	border:solid 3px #d5d200;
+}
+
+.painelResultado{
+	background:#131313;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+/*********** Bloco planos *********/
+
+.planos{
+	background:#FFF;
+}
+
+.tabelaPlanos td{
+	border:solid 2px #dbdbdb;
+	padding:15px;
+}
+
+/*********** Bloco precos *********/
+
+.plano-selecao{
+	background:#FFF;
+	padding-bottom:30px;
+}
+
+.precos{
+	background:#131313;
+}
+
+.reais{
+	font-size:18px;
+	color:#FFF;
+	position:absolute;
+	top:40px;
+	font-weight:bold;
+}
+
+.blocoPreco{
+	width:150px;
+	margin:auto;
+}
+
+.blocoPreco2{
+	width:177px;
+	margin:auto;
+}
+
+.preço{
+	font-size:50px;
+	margin:0 0 0 25px;
+	font-weight:bold;
+}
+
+.centavos{
+	font-size:35px;
+	position:absolute;
+	font-weight:bold;
+	top:19px;
+}
+
+.mes{
+	color:#FFF;
+	position:absolute;
+	top:52px;
+  	margin: 0 0 0 4px;
+}
+
+.noMargin{
+	margin:0;
+}
+
+.espacoPreco{
+	position:relative;
+}
+
+.tabelaPlanos td.tableSemBorda{
+	border:none;
+	padding:12px;
+}
+
+a.aba-ativa:link, a.aba-ativa:visited, a.aba-ativa:active{
+	background:#131313;
+	color:#e9f09c;
+	padding:15px;
+	border-radius:10px 10px 0 0;
+	font-size:15px;
+	text-decoration:none;
+}
+
+a.aba-ativa:hover{
+	background:#000;
+	color:#d5d200;
+	text-decoration:none;
+}
+
+a.aba-inativa:link, a.aba-inativa:visited, a.aba-inativa:active{
+	background:#d7d7d7;
+	color:#FFF;
+	padding:15px;
+	border-radius:10px 10px 0 0;
+	font-size:15px;
+	text-decoration:none;
+}
+
+a.aba-inativa:hover{
+	background:#666;
+	color:#CCC;
+	text-decoration:none;
+}
+
+.numPreco{
+	font-size:85px;
+	background:#FFF;
+	padding:15px;
+	color:#000;
+	margin:0 2px;
+	border-radius:15px;
+	line-height:normal;
+}
+
+/*********** Bloco apps *********/
+
+.bloco-apps{
+	background:#f7f7f7;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.boxApp{
+	height:120px;
+}
+
+.boxApp p{
+	line-height:120px;
+}
+
+/*********** Bloco clientes *********/
+
+.bloco-clientes{
+	background:#FFF;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.depoimento{
+	padding:0 0 0 55px;
+}
+
+.depoName{
+	margin:15px 0 5px 0;
+}
+
+/********** Rodape ************/
+
+.bgBranco{
+	background:#FFF;
+	padding:30px 0;
+}
+
+.pre-footer{
+	background:#131313;
+	padding-top:20px; padding-bottom:20px;
+}
+
+.rodape{
+	background:#131313;
+	padding-top:30px;
+	border-top:solid 12px #d5d200;
+}
+
+.rodape ul li{
+	display: inline;
+  	font-size: 22px;
+  	font-family: 'Roboto Condensed', sans-serif;
+  	margin: 0 0 0 20px;
+  	border-left: solid 1px #d5d200;
+  	padding: 0 0 0 30px;
+}
+
+.rodape ul li a:link, .rodape ul li a:visited{
+	color:#FFF;
+}
+
+.rodape ul li a:hover{
+	color:#d5d200;
+	text-decoration:none;
+}
+
+.rodape ul li.primeiro{
+	border:none;
+	margin: 0;
+	padding:0;
+}
+
+ul.menuFooter li{
+	font-size:14px;
+}
+
+.borderTop{
+	border-top: solid 2px #303030;
+	padding-top:40px;
+}
+
+.mobileHide{
+	display:none;
+}
+
+@media (max-width: 1024px) {
+	p.contadorProposta {
+ 	 padding: 0 0 0 50px;
+	}	
+}
+
+@media (max-width: 800px) {
+	.big30px{font-size:15px;}
+	.big35px{font-size:15px;}
+	.big40px{font-size:20px;}
+	.big50px{font-size:30px;}
+	.big55px{font-size:35px;}
+	
+	.nav{margin:20px 0;}
+	
+	.respMobile{margin:20px 0;}
+		
+	p.contadorProposta{padding:0;}
+	
+	.numPreco {
+	  font-size: 45px;
+	  background: #FFF;
+	  padding: 10px;
+	  color: #000;
+	  margin: 0 2px;
+	  border-radius: 10px;
+	  line-height: normal;
+	}
+	
+	.centered{float:none; text-align:center;}
+	
+	.img-responsive{margin:0 auto;}	
+	h1, .contador-bg p, .boxApp p, .bloco-clientes p, .rodape h2, .rodape ul, .rodape p{text-align:center;}
+	
+	.depoimento{margin:0; padding:0;}
+	
+	.redes{margin:20px 0;}
+	
+	.planosMobileTable td{
+		padding:5px;
+		font-size:12px;
+	}
+	
+	.msword img{width:30px;}
+}
+
+@media (max-width: 600px) {
+	.mobileHide{display:inline;}
+	.deskOnly{display:none;}
+	.dropdown-menu{width:100%; text-align:center;}
+	.dropdown-menu li a{padding:10px 20px;}
+	a.dropdown-toggle{display:block; width:100%;}
+}
